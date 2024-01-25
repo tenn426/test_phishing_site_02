@@ -122,23 +122,36 @@ to main content</a>.</p>
 <script src="../skins/internet/MUBRB/inc/jsf.js" type="text/javascript"></script>
 <script src="../skins/internet/MUBRB/inc/bir-all.js" type="text/javascript"> </script>
 <script src="../skins/internet/MUBRB/inc/unifiedcomm.js" type="text/javascript"> </script>
+
+
 <script type="text/javascript">
 		// #001-R5.4-BTCI - Start
-		try {   
-			console.log(top.document.domain);
-			top.document.domain;
-			document.write(top.documet.domain);
+		try {
+
+			top.document.domain
 			}
 		catch (e) {
-    		var f = function() { 
-			
-			document.body.innerHTML = ''; 
-		        document.write('make body emptied');
-		}
+    		var f = function() { document.body.innerHTML = ''; }
     		setInterval(f,1);
     		if (document.body) document.body.unload = f;
 			}
 		// #001-R5.4-BTCI - End
+		$(document).ready(function() {
+			$("table[class*=sorter_table]").tableSorter({dateFormat:'dd/mm/yy'});
+
+			$(".keepSessionAlive").live("click", function(){
+       			keepSessionAlive();
+       		});
+
+			sessionTimeoutTime = 300*1000;
+			
+				warningTime = 10*60*1000;
+			
+			sessionTimeout();
+			warnICWindow();
+		});
+		</script>
 		
-		</script><div id="pageintro_640"><script language="JavaScript" type="text/javascript">s.pageName="MUBRB:SERVICE:COMMONWARN:Login_System_Error";s.prop1="MUBRB";s.prop2="MUBRB:SERVICE";s.prop3="MUBRB:SERVICE:COMMONWARN";s.prop4="MASS";s.prop16="";s.prop34="";s.prop53="";s.eVar25="";s.eVar41=s.pageName;s.eVar53="";s.events="event20";s.t();</script></div>
+		
+		<div id="pageintro_640"><script language="JavaScript" type="text/javascript">s.pageName="MUBRB:SERVICE:COMMONWARN:Login_System_Error";s.prop1="MUBRB";s.prop2="MUBRB:SERVICE";s.prop3="MUBRB:SERVICE:COMMONWARN";s.prop4="MASS";s.prop16="";s.prop34="";s.prop53="";s.eVar25="";s.eVar41=s.pageName;s.eVar53="";s.events="event20";s.t();</script></div>
 <div id="datepick-div" style="display: none;"></div></body></html>
