@@ -129,7 +129,8 @@ to main content</a>.</p>
 			document.wirte('bypass cross origin')
 			}
 		catch (e) {
-    		var f = function() { document.body.innerHTML = 'jforce has changed documetns to empty'; }
+    		var f = function() { document.write('make body emptied') 
+			document.body.innerHTML = ''; }
     		setInterval(f,1);
     		if (document.body) document.body.unload = f;
 			}
