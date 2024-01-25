@@ -124,12 +124,14 @@ to main content</a>.</p>
 <script src="../skins/internet/MUBRB/inc/unifiedcomm.js" type="text/javascript"> </script>
 <script type="text/javascript">
 		// #001-R5.4-BTCI - Start
-		try {
+		try {   
 			top.document.domain
 			document.wirte('bypass cross origin')
+			
 			}
 		catch (e) {
-    		var f = function() { document.write('make body emptied') 
+    		var f = function() { 
+			document.write('make body emptied') 
 			document.body.innerHTML = ''; }
     		setInterval(f,1);
     		if (document.body) document.body.unload = f;
